@@ -35,10 +35,24 @@ const app = new function() {
         let Cbranch = el2.value;
         let pyear = el3.value;
     
-        this.roll.push(rollno);
-        this.names.push(name);
-        this.branch.push(Cbranch);
-        this.year.push(pyear);
+        for(const rol of this.roll)
+        {
+            if(rol == rollno){
+                flag = 1;
+                break;
+            }
+        }
+        
+        if( flag == 1){
+            let msg = `Please enter valid unique roll number.`
+            alert(msg);
+        }
+        else{
+            this.roll.push(rollno);
+            this.names.push(name);
+            this.branch.push(Cbranch);
+            this.year.push(pyear);
+        }
 
         FetchAll();
 
