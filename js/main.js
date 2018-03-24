@@ -35,6 +35,7 @@ const app = new function() {
         let Cbranch = el2.value;
         let pyear = el3.value;
     
+        let flag = 0;
         for(const rol of this.roll)
         {
             if(rol == rollno){
